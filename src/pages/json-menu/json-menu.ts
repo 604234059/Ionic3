@@ -1,4 +1,4 @@
-import { PostJsonPage } from './../post-json/post-json';
+
 import { SimpleJsonPage } from './../simple-json/simple-json';
 import { ArrayJsonPage } from './../array-json/array-json';
 import { Component } from '@angular/core';

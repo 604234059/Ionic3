@@ -1,3 +1,5 @@
+
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,12 +16,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'post-json.html',
 })
 export class PostJsonPage {
+  returnMsg = "";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PostJsonPage');
+  }
+
+  postJsonData(_name, _surname, _email) {
+    let jsonData;
+    jsonData = {
+      name: _name,
+      surname: _surname,
+      emil: _email
+    };
+    console.log(jsonData);
+    let url = 'http://localhost/shop/ion-get-simple-string.php';
+    this.http.post(url, jsonData).subscribe(
+      (data: any) => {
+        this.returnMsg = data.message;
+      }
+    );
+
   }
 
 }

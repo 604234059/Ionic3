@@ -17,6 +17,8 @@ import { CallNumber } from '@ionic-native/call-number';
 import { SMS } from '@ionic-native/sms';
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 import { Flashlight } from '@ionic-native/flashlight';
+// Import GttpClientModule
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { Flashlight } from '@ionic-native/flashlight';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

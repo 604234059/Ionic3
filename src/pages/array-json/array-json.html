@@ -12,4 +12,29 @@
 
 <ion-content padding>
 
+  <ion-card *ngFor="let mayGame of gameArray">
+
+    <ion-item>
+        <ion-avatar item-left>
+            <img src={{myGame.game_img}} >
+        </ion-avatar>
+        <h2>Name : {{myGame.game_name}}</h2>
+        <p>November 5, 1955</p>
+    </ion-item>
+
+    <img src="">
+
+    <ion-card-content>
+        <p>{{myGame.game_detail}}</p>
+    </ion-card-content>
+
+    
+
+</ion-card>
+
+
+
+
+
+
 </ion-content>
