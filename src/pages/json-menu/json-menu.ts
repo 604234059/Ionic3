@@ -1,6 +1,5 @@
 
-import { SimpleJsonPage } from './../simple-json/simple-json';
-import { ArrayJsonPage } from './../array-json/array-json';
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -25,15 +24,15 @@ export class JsonMenuPage {
     console.log('ionViewDidLoad JsonMenuPage');
   }
 
-  SimpleJson(){
+  SimpleJson() {
     this.navCtrl.push("SimpleJsonPage");
   }
 
-  ArrayJson(){
+  ArrayJson() {
     this.navCtrl.push("ArrayJsonPage");
   }
 
-  PostJson(){
+  PostJson() {
     this.navCtrl.push("PostJsonPage");
 
   }
