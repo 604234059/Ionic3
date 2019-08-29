@@ -1,3 +1,4 @@
+
 import { ScannerPage } from './../pages/scanner/scanner';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -8,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { FlashlightPage } from '../pages/flashlight/flashlight';
+import { JsonMenuPage } from './../pages/json-menu/json-menu';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +19,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any, icon: any}>;
+  pages: Array<{ title: string, component: any, icon: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
@@ -28,8 +30,9 @@ export class MyApp {
       { title: 'List', component: ListPage, icon: 'book' },
       { title: 'Login', component: LoginPage, icon: 'git-network' },
       { title: 'Scanner', component: ScannerPage, icon: 'git-network' },
-      { title: 'Flashlight', component: FlashlightPage, icon: 'git-network' }
-      
+      { title: 'Flashlight', component: FlashlightPage, icon: 'git-network' },
+      { title: 'JsonMenu', component: JsonMenuPage, icon: 'git-network' }
+
 
     ];
 

@@ -7,7 +7,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ScannerPage } from './../pages/scanner/scanner';
-import {FlashlightPage} from './../pages/flashlight/flashlight';
+import { FlashlightPage } from './../pages/flashlight/flashlight';
+import { JsonMenuPage } from './../pages/json-menu/json-menu';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +22,7 @@ import { Flashlight } from '@ionic-native/flashlight';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,LoginPage,ScannerPage,FlashlightPage
+    ListPage, LoginPage, ScannerPage, FlashlightPage, JsonMenuPage
   ],
   imports: [
     BrowserModule,
@@ -31,12 +32,12 @@ import { Flashlight } from '@ionic-native/flashlight';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,LoginPage,ScannerPage,FlashlightPage
+    ListPage, LoginPage, ScannerPage, FlashlightPage, JsonMenuPage
   ],
   providers: [
     StatusBar,
-    SplashScreen,CallNumber,SMS,BarcodeScanner,Flashlight,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    SplashScreen, CallNumber, SMS, BarcodeScanner, Flashlight,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

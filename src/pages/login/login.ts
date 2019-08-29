@@ -1,3 +1,5 @@
+import { PhoneBookDetailPage } from './../phone-book-detail/phone-book-detail';
+import { JsonMenuPage } from './../json-menu/json-menu';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -28,7 +30,7 @@ export class LoginPage {
     alert('Hello '+_username + _password);
     if (_password == '1234') {
       this.loginResult = "Pass";
-      this.navCtrl.push("PhoneBookPage");
+      this.navCtrl.push("PhoneBookDetailPage");
     } else {
       this.loginResult = "Failed";
     }

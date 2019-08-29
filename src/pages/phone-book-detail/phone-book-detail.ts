@@ -30,16 +30,11 @@ export class PhoneBookDetailPage {
   }
 
   Call(){
-    this.call.callNumber(this.contact.telephone,true).then(()=>{}).catch((err)=>{});
+    this.call.callNumber(this.contact.telephone,true).then().catch((err)=>{});
   }
   Sms(){
-    var options : {
-      replaceLineBreaks : true,
-      android :{
-        intent : "INTENT"
-      }
-    }
-    this.sms.send(this.contact.telephone,'Hi--',options).then(()=>{}).catch((err)=>{});
+    
+    this.sms.send(this.contact.telephone,'Hi--').then().catch((err)=>{});
   }
 
 
