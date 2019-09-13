@@ -1,4 +1,3 @@
-import { PhoneBookPage } from './../phone-book/phone-book';
 
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';

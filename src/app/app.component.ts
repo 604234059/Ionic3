@@ -1,4 +1,3 @@
-
 import { ScannerPage } from './../pages/scanner/scanner';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -10,6 +9,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { FlashlightPage } from '../pages/flashlight/flashlight';
 import { JsonMenuPage } from './../pages/json-menu/json-menu';
+import { TabsTmdPage } from './../pages/tabs-tmd/tabs-tmd';
 
 @Component({
   templateUrl: 'app.html'
@@ -31,7 +31,9 @@ export class MyApp {
       { title: 'Login', component: LoginPage, icon: 'git-network' },
       { title: 'Scanner', component: ScannerPage, icon: 'git-network' },
       { title: 'Flashlight', component: FlashlightPage, icon: 'git-network' },
-      { title: 'JsonMenu', component: JsonMenuPage, icon: 'git-network' }
+      { title: 'JsonMenu', component: JsonMenuPage, icon: 'git-network' },
+      { title: 'tabs_TMD', component: TabsTmdPage, icon: 'git-network' }
+
 
 
     ];

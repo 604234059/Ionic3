@@ -19,12 +19,13 @@ import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 import { Flashlight } from '@ionic-native/flashlight';
 // Import GttpClientModule
 import {HttpClientModule} from '@angular/common/http';
+import { TabsTmdPage } from '../pages/tabs-tmd/tabs-tmd';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage, LoginPage, ScannerPage, FlashlightPage, JsonMenuPage
+    ListPage, LoginPage, ScannerPage, FlashlightPage, JsonMenuPage,TabsTmdPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,7 @@ import {HttpClientModule} from '@angular/common/http';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage, LoginPage, ScannerPage, FlashlightPage, JsonMenuPage
+    ListPage, LoginPage, ScannerPage, FlashlightPage, JsonMenuPage,TabsTmdPage
   ],
   providers: [
     StatusBar,

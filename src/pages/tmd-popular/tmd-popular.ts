@@ -1,9 +1,8 @@
-
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the JsonMenuPage page.
+ * Generated class for the TmdPopularPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,32 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-json-menu',
-  templateUrl: 'json-menu.html',
+  selector: 'page-tmd-popular',
+  templateUrl: 'tmd-popular.html',
 })
-export class JsonMenuPage {
+export class TmdPopularPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad JsonMenuPage');
+    console.log('ionViewDidLoad TmdPopularPage');
   }
-
-  SimpleJson() {
-    this.navCtrl.push("SimpleJsonPage");
-  }
-
-  ArrayJson() {
-    this.navCtrl.push("ArrayJsonPage");
-  }
-
-  PostJson() {
-    this.navCtrl.push("PostJsonPage");
-
-  }
-
-
-
 
 }
