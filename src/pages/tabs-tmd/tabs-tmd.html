@@ -18,9 +18,11 @@
   <ion-card-header>
     All About Movie
   </ion-card-header>
-  <ion-list>
-    <ion-item *ngFor="let item of tmd_list">
-        <img src="{{item.imgurl}}" height='60' width='120'>   
+  <ion-list >
+    <ion-item *ngFor="let item of tmd_list" (click)="To_now_playing()">
+        <img src="{{item.imgurl}}" height='60' width='120'>
+        <h1>{{item.list1}}</h1> 
+        <h2>{{item.list2}}</h2>   
     </ion-item>
   </ion-list>
 

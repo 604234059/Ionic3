@@ -15,11 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TabsTmdPage {
   tmd_list = [
-    { imgurl: 'assets/imgs/video-camera.svg', list1: '55', list2: '66' },
-    { imgurl: 'assets/imgs/film-roll.svg', list1: '55', list2: '66' },
-    { imgurl: 'assets/imgs/clapperboard.svg', list1: '55', list2: '66' },
-    { imgurl: 'assets/imgs/.svg', list1: '55', list2: '66' }
-  ];
+    { imgurl: 'assets/imgs/video-camera.svg', list1: 'Now', list2: 'Now Playing' },
+    { imgurl: 'assets/imgs/film-roll.svg', list1: 'Upcoming', list2: 'Upcoming Movie' },
+    { imgurl: 'assets/imgs/clapperboard.svg', list1: 'Popular', list2: 'Popular Movie' },
+    { imgurl: 'assets/imgs/top-rated.svg', list1: 'Top Rated', list2: 'Top Rated Movie' }
+  ]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -27,5 +27,8 @@ export class TabsTmdPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabsTmdPage');
   }
-
+  
+  To_now_playing() {
+    this.navCtrl.push("TmdNowPlayingPage");
+  }
 }
