@@ -16,22 +16,26 @@
 <ion-content padding>
 
   <ion-card>
-      <ion-card-header>
-          <h1 ion-text color= "light"> All About Movie</h1>
-      </ion-card-header>
+    <ion-card-header>
+      <h1 ion-text color="light"> All About Movie</h1>
+    </ion-card-header>
     <ion-list>
       <!-- click array?-->>
-      <ion-item *ngFor="let item of tmd_list" (click)="5">
-        <ion-thumbnail item-left>
-          <img src="{{item.imgurl}}">
-        </ion-thumbnail>
-        <h1>
-          {{item.list1}}
-        </h1>
-        <h2>
-          {{item.list2}}
-        </h2>
-      </ion-item>
+      <li *ngFor="let item of tmd_list">
+
+        <ion-item (click)="To_tmd_page(item)">
+          <ion-thumbnail item-left>
+            <img src="{{item.imgurl}}">
+          </ion-thumbnail>
+          <h1>
+            {{item.list1}}
+          </h1>
+          <h2>
+            {{item.list2}}
+          </h2>
+        </ion-item>
+
+      </li>
     </ion-list>
   </ion-card>
 

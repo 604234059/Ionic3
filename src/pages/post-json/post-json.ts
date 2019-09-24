@@ -33,6 +33,7 @@ export class PostJsonPage {
       emil: _email
     };
     console.log(jsonData);
+    
     let url = 'http://localhost/shop/ion-get-simple-string.php';
     this.http.post(url, jsonData).subscribe(
       (data: any) => {
