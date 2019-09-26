@@ -29,7 +29,7 @@ export class TabsTmdPage {
   }
 
   //link to page
-  To_tmd_page(item) {
+  To_tmdview_page(item) {
     this.navCtrl.push("TmdViewPage",item);
   }
 

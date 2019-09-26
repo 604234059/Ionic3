@@ -20,6 +20,7 @@ import { Flashlight } from '@ionic-native/flashlight';
 // Import GttpClientModule
 import {HttpClientModule} from '@angular/common/http';
 import { TabsTmdPage } from '../pages/tabs-tmd/tabs-tmd';
+import { ApikeyProvider } from '../providers/apikey/apikey';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { TabsTmdPage } from '../pages/tabs-tmd/tabs-tmd';
   providers: [
     StatusBar,
     SplashScreen, CallNumber, SMS, BarcodeScanner, Flashlight,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    ApikeyProvider
   ]
 })
 export class AppModule { }
