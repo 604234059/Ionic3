@@ -11,6 +11,7 @@ import { Injectable } from '@angular/core';
 export class ApikeyProvider {
   private baseURL = 'https://api.themoviedb.org/3/';
   private apiKey = 'api_key=10810cc7ad7c4a572a42e3ab7952ebca';
+  
   constructor(public http: HttpClient) {
     console.log('Hello ApikeyProvider Provider');
   }

@@ -17,7 +17,7 @@ import { ApikeyProvider } from '../../providers/apikey/apikey';
 export class TmdViewPage {
   array_tmb: any = [];
 
-  //แก้ ดดยเปลี่ยนเป็น any
+  //แก้โดยเปลี่ยนเป็น any และลบ{}
   con_tmd_list: any = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, private api_tmd: ApikeyProvider) {
 
@@ -28,19 +28,22 @@ export class TmdViewPage {
     this.con_tmd_list = this.navParams.data;
     console.log(this.con_tmd_list);
 
-    //ถ้า list2 ใน array con_tmd_list =หน้านั้นๆให้เรียกใช้ เมธอดload_api_ประจำหน้านั้น
+    //ถ้า list2 ใน array con_tmd_list =หน้านั้นๆให้เรียกใช้ เมธอด load_api_ประจำหน้านั้น
     if (this.con_tmd_list.list2 == 'Now Playing') {
       this.load_api_nowplaying();
+      console.log('load_api_nowplaying()');
 
     } else if (this.con_tmd_list.list2 == 'Upcoming Movie') {
       this.load_api_upcoming();
+      console.log('load_api_upcoming()');
 
     } else if (this.con_tmd_list.list2 == 'Popular Movie') {
       this.load_api_popular();
+      console.log('load_api_popular()');
 
-    }
-    else if (this.con_tmd_list.list2 == 'Top Rated Movie') {
+    } else if (this.con_tmd_list.list2 == 'Top Rated Movie') {
       this.load_api_toprate();
+      console.log('load_api_toprate()');
     }
 
   }
