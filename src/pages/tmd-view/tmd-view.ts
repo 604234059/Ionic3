@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HttpClient } from '@angular/common/http';
 import { ApikeyProvider } from '../../providers/apikey/apikey';
 
 /**
@@ -17,10 +16,11 @@ import { ApikeyProvider } from '../../providers/apikey/apikey';
 })
 export class TmdViewPage {
   array_tmb: any = [];
-  con_tmd_list = [{ imgurl: '', list1: '', list2: '' }]
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, private api_tmd: ApikeyProvider) {
 
-
+  //แก้ ดดยเปลี่ยนเป็น any
+  con_tmd_list:any = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, private api_tmd: ApikeyProvider) { 
+    
   }
 
   ionViewDidLoad() {
@@ -29,19 +29,17 @@ export class TmdViewPage {
     console.log(this.con_tmd_list);
 
     //ถ้า list2 ใน array con_tmd_list =หน้านั้นๆให้เรียกใช้ เมธอดload_api_ประจำหน้านั้น
-    
-    
-    if (this.con_tmd_list[0].list2 == 'Now Playing') {
+    if (this.con_tmd_list.list2 == 'Now Playing') {
       this.load_api_nowplaying();
 
-    } else if (this.con_tmd_list[0].list2  == 'Upcoming Movie') {
+    } else if ( this.con_tmd_list.list2  == 'Upcoming Movie') {
       this.load_api_upcoming();
 
-    } else if (this.con_tmd_list[0].list2  == 'Popular Movie') {
+    } else if (this.con_tmd_list.list2  == 'Popular Movie') {
       this.load_api_popular();
 
     }
-    else if (this.con_tmd_list[0].list2 == 'Top Rated Movie') {
+    else if (this.con_tmd_list.list2 == 'Top Rated Movie') {
       this.load_api_toprate();
     }
 
@@ -76,6 +74,8 @@ export class TmdViewPage {
     });
   }
 
+
+  //link to page
   To_tmddetail_page(item) {
     this.navCtrl.push("TmdMovieDetailPage",item);
   }

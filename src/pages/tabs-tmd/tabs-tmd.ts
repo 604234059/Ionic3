@@ -20,12 +20,13 @@ export class TabsTmdPage {
     { imgurl: 'assets/imgs/clapperboard.svg', list1: 'Popular', list2: 'Popular Movie' },
     { imgurl: 'assets/imgs/top-rated.svg', list1: 'Top Rated', list2: 'Top Rated Movie' }
   ]
-
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabsTmdPage');
+    
   }
 
   //link to page

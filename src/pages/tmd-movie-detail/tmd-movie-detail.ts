@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ApikeyProvider } from '../../providers/apikey/apikey';
 
 /**
  * Generated class for the TmdMovieDetailPage page.
@@ -16,10 +15,9 @@ import { ApikeyProvider } from '../../providers/apikey/apikey';
 })
 export class TmdMovieDetailPage {
 
-  t_array_tmb:number=0;
+  t_array_tmb:any=[];
 
-  array_tmb_dtail: any[];
-  constructor(public navCtrl: NavController, public navParams: NavParams, private api_tmd: ApikeyProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
