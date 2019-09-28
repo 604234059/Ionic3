@@ -19,21 +19,20 @@
     <ion-card-header>
       <h1 ion-text color="light"> All About Movie</h1>
     </ion-card-header>
-    <ion-list >
-      <!--value="item.list2"   /*[(ngModel)]="check_list"*/-->
-        <ion-item *ngFor="let item of tmd_list" (click)="To_tmdview_page(item)">
-          <ion-thumbnail item-left >
-            <img src="{{item.imgurl}}">
-          </ion-thumbnail>
-          <h1>
-            {{item.list1}}
-          </h1>
-          <h2>
-            {{item.list2}}
-          </h2>
-        </ion-item>
+    <ion-list color>
+      <ion-item *ngFor="let item of tmd_list" (click)="To_tmdview_page(item)">
+        <ion-thumbnail item-left>
+          <img src="{{item.imgurl}}">
+        </ion-thumbnail>
+        <h1>
+          {{item.list1}}
+        </h1>
+        <h2>
+          {{item.list2}}
+        </h2>
+      </ion-item>
 
-      
+
     </ion-list>
   </ion-card>
 

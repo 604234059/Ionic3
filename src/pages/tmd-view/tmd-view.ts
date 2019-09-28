@@ -18,9 +18,9 @@ export class TmdViewPage {
   array_tmb: any = [];
 
   //แก้ ดดยเปลี่ยนเป็น any
-  con_tmd_list:any = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams, private api_tmd: ApikeyProvider) { 
-    
+  con_tmd_list: any = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, private api_tmd: ApikeyProvider) {
+
   }
 
   ionViewDidLoad() {
@@ -32,10 +32,10 @@ export class TmdViewPage {
     if (this.con_tmd_list.list2 == 'Now Playing') {
       this.load_api_nowplaying();
 
-    } else if ( this.con_tmd_list.list2  == 'Upcoming Movie') {
+    } else if (this.con_tmd_list.list2 == 'Upcoming Movie') {
       this.load_api_upcoming();
 
-    } else if (this.con_tmd_list.list2  == 'Popular Movie') {
+    } else if (this.con_tmd_list.list2 == 'Popular Movie') {
       this.load_api_popular();
 
     }
@@ -77,8 +77,8 @@ export class TmdViewPage {
 
   //link to page
   To_tmddetail_page(item) {
-    this.navCtrl.push("TmdMovieDetailPage",item);
+    this.navCtrl.push("TmdMovieDetailPage", item);
   }
 
-  
+
 }

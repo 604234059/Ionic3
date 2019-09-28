@@ -6,38 +6,38 @@
 -->
 <ion-header>
   <ion-navbar>
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>tmd_MovieDetail</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>tmd_MovieDetail</ion-title>
   </ion-navbar>
 </ion-header>
-    
+
 
 
 <ion-content padding>
 
-    <ion-card color = "dark">
-        <ion-card-header >
-           <ion-thumbnail  item-start>
-                  <img src="https://image.tmdb.org/t/p/original/{{t_array_tmb.poster_path}}">
-              </ion-thumbnail >
-              <button ion-button block icon-lef color="light"  (click)="1" > Video Trailler</button>
-              <button ion-button block icon-lef color="light"  (click)="1" > textOrOptions</button>
-        </ion-card-header>
-      </ion-card > 
- 
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-thumbnail item-start>
+        <img src="https://image.tmdb.org/t/p/original/{{t_array_tmb.poster_path}}">
+      </ion-thumbnail>
+      <button ion-button block icon-lef color="light" (click)="1"> Video Trailler</button>
+      <button ion-button block icon-lef color="light" (click)="1"> textOrOptions</button>
+    </ion-card-header>
+  </ion-card>
 
-        <ion-card color = "light">
-          
-          <ion-card-content>
-              <h2><b>release_date</b></h2>
-              <p>{{t_array_tmb.release_date}}</p>
-              <h2><b>Average</b></h2>
-              <p>{{t_array_tmb.vote_average}}</p>
-              <h2><b>Overview</b></h2>
-              <p>{{t_array_tmb.overview}}</p> 
-        </ion-card-content>
-      </ion-card> 
-       
+
+  <ion-card color="light">
+
+    <ion-card-content>
+      <h2><b>release_date</b></h2>
+      <p>{{t_array_tmb.release_date}}</p>
+      <h2><b>Average</b></h2>
+      <p>{{t_array_tmb.vote_average}}</p>
+      <h2><b>Overview</b></h2>
+      <p>{{t_array_tmb.overview}}</p>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

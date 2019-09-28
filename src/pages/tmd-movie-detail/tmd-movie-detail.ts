@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TmdMovieDetailPage {
 
-  t_array_tmb:any=[];
+  t_array_tmb: any = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
