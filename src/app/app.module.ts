@@ -17,6 +17,7 @@ import { CallNumber } from '@ionic-native/call-number';
 import { SMS } from '@ionic-native/sms';
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 import { Flashlight } from '@ionic-native/flashlight';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 // Import GttpClientModule
 import {HttpClientModule} from '@angular/common/http';
 import { TabsTmdPage } from '../pages/tabs-tmd/tabs-tmd';
@@ -41,7 +42,7 @@ import { ApikeyProvider } from '../providers/apikey/apikey';
   ],
   providers: [
     StatusBar,
-    SplashScreen, CallNumber, SMS, BarcodeScanner, Flashlight,
+    SplashScreen, CallNumber, SMS, BarcodeScanner, Flashlight,YoutubeVideoPlayer,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ApikeyProvider
   ]

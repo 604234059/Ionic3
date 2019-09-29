@@ -20,7 +20,6 @@ export class TmdViewPage {
   //แก้โดยเปลี่ยนเป็น any และลบ{}
   con_tmd_list: any = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, private api_tmd: ApikeyProvider) {
-
   }
 
   ionViewDidLoad() {
@@ -82,6 +81,5 @@ export class TmdViewPage {
   To_tmddetail_page(item) {
     this.navCtrl.push("TmdMovieDetailPage", item);
   }
-
 
 }
