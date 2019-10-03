@@ -22,8 +22,9 @@
       <ion-thumbnail item-start>
         <img src="https://image.tmdb.org/t/p/original/{{t_array_tmb.poster_path}}">
       </ion-thumbnail>
-      <button ion-button block icon-lef color="light" (click)="open_youtube_Trailler()"> Video Trailler</button>
-      <button ion-button block icon-lef color="light" (click)="1"> textOrOptions</button>
+      <button ion-button block icon-lef color="light" (click)="To_tmd_vdo_trailler_page(t_array_tmb.id)"> Video
+        Trailler</button>
+      <button ion-button block icon-lef color="light" (click)="text_to_speech(t_array_tmb.overview)"> textOrOptions</button>
     </ion-card-header>
   </ion-card>
 

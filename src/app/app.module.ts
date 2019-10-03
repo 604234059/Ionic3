@@ -18,8 +18,9 @@ import { SMS } from '@ionic-native/sms';
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 import { Flashlight } from '@ionic-native/flashlight';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 // Import GttpClientModule
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { TabsTmdPage } from '../pages/tabs-tmd/tabs-tmd';
 import { ApikeyProvider } from '../providers/apikey/apikey';
 
@@ -27,7 +28,7 @@ import { ApikeyProvider } from '../providers/apikey/apikey';
   declarations: [
     MyApp,
     HomePage,
-    ListPage, LoginPage, ScannerPage, FlashlightPage, JsonMenuPage,TabsTmdPage
+    ListPage, LoginPage, ScannerPage, FlashlightPage, JsonMenuPage, TabsTmdPage
   ],
   imports: [
     BrowserModule,
@@ -38,11 +39,11 @@ import { ApikeyProvider } from '../providers/apikey/apikey';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage, LoginPage, ScannerPage, FlashlightPage, JsonMenuPage,TabsTmdPage
+    ListPage, LoginPage, ScannerPage, FlashlightPage, JsonMenuPage, TabsTmdPage
   ],
   providers: [
     StatusBar,
-    SplashScreen, CallNumber, SMS, BarcodeScanner, Flashlight,YoutubeVideoPlayer,
+    SplashScreen, CallNumber, SMS, BarcodeScanner, Flashlight, YoutubeVideoPlayer, TextToSpeech,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ApikeyProvider
   ]

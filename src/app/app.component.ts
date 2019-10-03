@@ -34,8 +34,6 @@ export class MyApp {
       { title: 'JsonMenu', component: JsonMenuPage, icon: 'git-network' },
       { title: 'tabs_TMD', component: TabsTmdPage, icon: 'git-network' }
 
-
-
     ];
 
   }
@@ -44,7 +42,7 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
+      this.statusBar.styleBlackTranslucent();
       this.splashScreen.hide();
     });
   }

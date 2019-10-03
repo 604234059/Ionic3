@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
-import { ApikeyProvider } from '../../providers/apikey/apikey';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
+
 
 /**
  * Generated class for the TmdMovieDetailPage page.
@@ -17,8 +17,9 @@ import { ApikeyProvider } from '../../providers/apikey/apikey';
 })
 export class TmdMovieDetailPage {
 
-  t_array_tmb: any = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams, private youtube: YoutubeVideoPlayer, private api_tmd: ApikeyProvider) {
+  private t_array_tmb: any = [];
+  private check_tts: boolean = false;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
   }
 
   ionViewDidLoad() {
@@ -28,18 +29,26 @@ export class TmdMovieDetailPage {
 
   }
 
-  //open Video Trailler
-  open_youtube_Trailler() {
-    var you_tube: any = [];
+  //link to page
+  To_tmd_vdo_trailler_page(id_tmd) {
+    this.navCtrl.push("TmdVdoTraillerPage", id_tmd);
+  }
 
-    this.api_tmd.get_Api_Videos(this.t_array_tmb.id).subscribe(movies => {
-      you_tube = movies['results'];
-      console.log(movies);
-      
-      //native you tube
-      this.youtube.openVideo(you_tube[0].key);
-      console.log('you_tube'); 
-      console.log(you_tube[0].key);
-    }); 
+  text_to_speech(text_link: string) {
+
+    if (this.check_tts == false) {
+      this.tts.speak({
+        text: text_link,
+        rate: 0
+      });
+      this.check_tts = true;
+      console.log('op '+this.check_tts);
+
+    } else {
+      this.tts.speak('');
+      this.check_tts = false;
+      console.log('ed '+this.check_tts);
+    }
+
   }
 }
