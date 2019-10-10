@@ -18,7 +18,7 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 export class TmdMovieDetailPage {
 
   private t_array_tmb: any = [];
-  private check_tts: boolean = false;
+  private check_tts: boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
   }
 
@@ -35,20 +35,22 @@ export class TmdMovieDetailPage {
   }
 
   text_to_speech(text_link: string) {
+    let rate_slow_fast: number = 0.75;
 
     if (this.check_tts == false) {
+      this.check_tts = true;
+
+      //TextToSpeech
       this.tts.speak({
         text: text_link,
-        rate: 0
+        rate: rate_slow_fast
       });
-      this.check_tts = true;
-      console.log('op '+this.check_tts);
-
-    } else {
+    }
+    else {
       this.tts.speak('');
       this.check_tts = false;
-      console.log('ed '+this.check_tts);
     }
 
   }
+  
 }

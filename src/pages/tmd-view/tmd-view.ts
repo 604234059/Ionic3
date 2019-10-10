@@ -16,9 +16,12 @@ import { ApikeyProvider } from '../../providers/apikey/apikey';
 })
 export class TmdViewPage {
   array_tmb: any = [];
+  search_tmd_list: any[];
 
+  searchTerm: string;
   //แก้โดยเปลี่ยนเป็น any และลบ{}
   con_tmd_list: any = [];
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, private api_tmd: ApikeyProvider) {
   }
 
@@ -43,7 +46,7 @@ export class TmdViewPage {
     } else if (this.con_tmd_list.list2 == 'Top Rated Movie') {
       this.load_api_toprate();
       console.log('load_api_toprate()');
-    }
+    }else;
 
   }
 
@@ -76,6 +79,10 @@ export class TmdViewPage {
     });
   }
 
+  getItems() {
+      this.search_tmd_list = this.con_tmd_list.original_title;
+    
+  }
 
   //link to page
   To_tmddetail_page(item) {
@@ -83,3 +90,8 @@ export class TmdViewPage {
   }
 
 }
+
+
+
+
+
